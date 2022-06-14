@@ -1,0 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Enemy : MonoBehaviour
+{
+    //Enemy‚Ì‘Ì—Í—p•Ï”
+    private int enemyHp;
+
+    GameObject bullet;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //¶¬‚É‘Ì—Í‚ğw’è‚µ‚Ä‚¨‚­
+        enemyHp = 3;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //‚à‚µHP‚ª0‚É‚È‚Á‚½‚ç
+        if(enemyHp <= 0)
+        {
+            //©•ª‚ÅÁ‚¦‚é
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void Damage()
+    {
+        //enemy‚Ì‘Ì—Í‚ğ1Œ¸‚ç‚·
+        enemyHp = enemyHp - 1;
+        Destroy(bullet);
+    }
+}
