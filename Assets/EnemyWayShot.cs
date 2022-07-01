@@ -43,7 +43,7 @@ public class EnemyWayShot : MonoBehaviour
         }
 
         //タイマーを減らす
-        nowtime = delayTime;
+        nowtime -= Time.deltaTime;
 
         //もしタイマーが0以下になったら
         if (nowtime <= 0)
@@ -57,10 +57,12 @@ public class EnemyWayShot : MonoBehaviour
                 //弾を生成
                 CreateShotObject(bulletWaySpace - bulletWaySpaceSplit + transform.localEulerAngles.y);
 
-                //タイマーを初期化
-                nowtime = time;
+                //角度を調整する
+                bulletWaySpaceSplit += (bulletWaySpace / (bulletWayNum - 1)) * 2;
 
             }
+            //タイマーを初期化
+            nowtime = time;
         }
     }
 

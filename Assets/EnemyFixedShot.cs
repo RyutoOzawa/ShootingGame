@@ -60,7 +60,13 @@ public class EnemyFixedShot : MonoBehaviour
             {
                 //弾を生成
                 CreateShotObject(bulletWaySpace - bulletWaySpaceSplit + bulletWayAxis - transform.localEulerAngles.y);
+
+                //角度を調整する
+                bulletWaySpaceSplit += (bulletWaySpace / (bulletWayNum - 1)) * 2;
             }
+
+            //タイマーを初期化
+            nowtime = time;
         }
     }
 

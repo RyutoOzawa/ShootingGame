@@ -14,9 +14,6 @@ GameObject:
   - component: {fileID: 568253149793142531}
   - component: {fileID: 6173202359519317903}
   - component: {fileID: 8902137682161040053}
-  - component: {fileID: -7230544981858480140}
-  - component: {fileID: -338050218331248442}
-  - component: {fileID: -2524085923087808225}
   m_Layer: 0
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -130,53 +127,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   time: 2
---- !u!114 &-7230544981858480140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058204299644500198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faf11b38dcb4cd143940b200939658c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 1058204299644500198}
-  time: 1
-  delayTime: 1
---- !u!114 &-338050218331248442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058204299644500198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b182f6545b9ebf488ea27edac82f3e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 1058204299644500198}
-  bulletWayNum: 3
-  bulletWaySpace: 30
-  time: 1
-  delayTime: 1
---- !u!114 &-2524085923087808225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1058204299644500198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c3a15a36c58af1438450886817d90eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 1058204299644500198}
-  bulletWayNum: 3
-  bulletWaySpace: 30
-  bulletWayAxis: 0
-  time: 1
-  delayTime: 1
