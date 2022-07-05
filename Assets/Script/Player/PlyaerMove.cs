@@ -10,6 +10,8 @@ public class PlyaerMove : MonoBehaviour
 
     float speed = 0;
 
+ 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,5 +65,9 @@ public class PlyaerMove : MonoBehaviour
         }
         transform.position = new Vector3(pos.x, pos.y, pos.z);
 
+        
+
     }
+
+  
 }

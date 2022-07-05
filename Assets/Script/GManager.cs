@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GManager : MonoBehaviour
 {
+    public GameObject resetButton;
+    public GameObject titleButton;
+
     //敵の数を数える用の変数
     private GameObject[] enemy;
 
@@ -12,28 +17,33 @@ public class GManager : MonoBehaviour
 
     public GameObject spawnEnemy;
 
+
+    //スコア管理
+    private int score = 0;
+    public Text scoreText;
+
     //敵のリスポーンタイム
     public float enemyRespawnTime = 5;
 
-    //敵の最大数
-    public int maxEnemy = 0;
-
-    //現在の敵の数
-    int nowEnemyCount = 0;
 
     //現在のタイマー
     float nowTime = 0;
 
     void Start()
     {
+        //fpsの固定
+        Screen.SetResolution(1920, 1080, false);
+        Application.targetFrameRate = 60;
+
         //パネルを隠す
         panel.SetActive(false);
 
         //タイマーを初期化
         nowTime = enemyRespawnTime;
 
-        //敵の数を初期化
-        nowEnemyCount = maxEnemy;
+      
+
+        score = 0;
     }
 
      void Update()
@@ -46,6 +56,8 @@ public class GManager : MonoBehaviour
         {
             //パネルを表示させる
             panel.SetActive(true);
+            resetButton.SetActive(true);
+            titleButton.SetActive(true);
         }
 
         //タイマーを減らす
@@ -73,5 +85,23 @@ public class GManager : MonoBehaviour
 
         GameObject enemyClone = Instantiate(spawnEnemy, pos, rota);
        
+    }
+
+    public void AddSocre(int addidx)
+    {
+        score = score + addidx;
+        Debug.Log("score:" + score);
+        scoreText.text = "score:" + score;
+    }
+
+    public void ChangeScene(string nextScene)
+    {
+        SceneManager.LoadScene(nextScene);
+    }
+
+    public void SceneReset()
+    {
+        string activeSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(activeSceneName);
     }
 }

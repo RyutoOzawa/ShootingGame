@@ -60,6 +60,9 @@ public class EnemyBullet : MonoBehaviour
         {
             //é©ï™Çè¡ñ≈Ç≥ÇπÇÈ
             Destroy(this.gameObject);
+
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponent<Player>().Damage();
         }
     }
     

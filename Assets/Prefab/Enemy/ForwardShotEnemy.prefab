@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b6a3087c4cfb4438ee51630a92e85d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  giveScore: 1000
+  gManager: {fileID: 2587167398594607114, guid: f84275a428815b6479541e03b0af6cc1, type: 3}
 --- !u!54 &2454227992720998823
 Rigidbody:
   m_ObjectHideFlags: 0

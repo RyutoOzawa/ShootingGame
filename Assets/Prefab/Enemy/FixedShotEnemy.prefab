@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b6a3087c4cfb4438ee51630a92e85d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  giveScore: 100
+  gManager: {fileID: 2587167398594607114, guid: f84275a428815b6479541e03b0af6cc1, type: 3}
 --- !u!54 &2777750563786367417
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -142,6 +144,6 @@ MonoBehaviour:
   bullet: {fileID: 1058204299644500198, guid: 1e6774d0825752a40ba51718ee422f33, type: 3}
   bulletWayNum: 3
   bulletWaySpace: 30
-  bulletWayAxis: 0
+  bulletWayAxis: 180
   time: 1
   delayTime: 1

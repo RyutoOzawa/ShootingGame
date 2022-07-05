@@ -7,6 +7,9 @@ public class Enemy : MonoBehaviour
     //Enemy‚Ì‘Ì—Í—p•Ï”
     private int enemyHp;
 
+    public int giveScore;
+
+    public GManager gManager;
     
 
     // Start is called before the first frame update
@@ -24,6 +27,7 @@ public class Enemy : MonoBehaviour
         {
             //©•ª‚ÅÁ‚¦‚é
             Destroy(this.gameObject);
+            gManager.AddSocre(giveScore);
         }
     }
 
